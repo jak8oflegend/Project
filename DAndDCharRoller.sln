@@ -5,6 +5,8 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAndDCharRoller", "DAndDCharRoller\DAndDCharRoller.csproj", "{AD2CF4BD-AD2D-4D3F-9141-B87F029497A2}"
 EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "CharDB", "CharDB\CharDB.sqlproj", "{A2ABCD87-AE00-4B08-8510-C02601B29D70}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,12 @@ Global
 		{AD2CF4BD-AD2D-4D3F-9141-B87F029497A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD2CF4BD-AD2D-4D3F-9141-B87F029497A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD2CF4BD-AD2D-4D3F-9141-B87F029497A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2ABCD87-AE00-4B08-8510-C02601B29D70}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2ABCD87-AE00-4B08-8510-C02601B29D70}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2ABCD87-AE00-4B08-8510-C02601B29D70}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A2ABCD87-AE00-4B08-8510-C02601B29D70}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2ABCD87-AE00-4B08-8510-C02601B29D70}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2ABCD87-AE00-4B08-8510-C02601B29D70}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
