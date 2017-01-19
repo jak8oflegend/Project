@@ -12,11 +12,35 @@ namespace DAndDCharRoller
 {
     public partial class StatRoller : Form
     {
+        ComboBox[] statarray;
+
         public StatRoller()
         {
+            
             InitializeComponent();
         }
 
+        
+
+        public void  statcheck(ComboBox original){
+            statarray = new ComboBox[6] {comboBox1,comboBox2,comboBox3,comboBox4,comboBox5,comboBox6};
+            for (int i = 0; i < 6; i++)
+            {
+                if (original.SelectedIndex >= 0 ) {
+                    if (original != statarray[i])
+                    {
+                        if (original.SelectedIndex == statarray[i].SelectedIndex)
+                        {
+                            MessageBox.Show("error you have selected " + original.Text + " in 2 locations this one will be reset");
+                            original.SelectedIndex = -1;
+
+                            
+                        }
+                    }
+                }
+            }
+
+        }
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -34,63 +58,22 @@ namespace DAndDCharRoller
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.Text == comboBox2.Text) {
-                MessageBox.Show("error you have selected " + comboBox1.Text + " in 2 locations this one will be reset");
-                comboBox1.SelectedIndex = -1;
-            }
-            if (comboBox1.Text == comboBox3.Text)
-            {
-                MessageBox.Show("error you have selected " + comboBox1.Text + " in 2 locations this one will be reset");
-                comboBox1.SelectedIndex = -1;
-            }
-        }
 
+            statcheck(comboBox1);
+        }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox2.Text == comboBox1.Text)
-            {
-                MessageBox.Show("error you have selected " + comboBox2.Text + " in 2 locations this one will be reset");
-                comboBox2.SelectedIndex = -1;
-            }
-            if (comboBox2.Text == comboBox3.Text)
-            {
-                MessageBox.Show("error you have selected " + comboBox2.Text + " in 2 locations this one will be reset");
-                comboBox2.SelectedIndex = -1;
-            }
-
+            statcheck(comboBox2);
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox3.Text == comboBox1.Text)
-            {
-                MessageBox.Show("error you have selected " + comboBox3.Text + " in 2 locations this one will be reset");
-                comboBox3.SelectedIndex = -1;
-            }
-            if (comboBox2.Text == comboBox3.Text)
-            {
-                MessageBox.Show("error you have selected " + comboBox3.Text + " in 2 locations this one will be reset");
-                comboBox3.SelectedIndex = -1;
-            }
+            statcheck(comboBox4);
         }
 
         private void comboBox3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox4.Text == comboBox1.Text)
-            {
-                MessageBox.Show("error you have selected " + comboBox4.Text + " in 2 locations this one will be reset");
-                comboBox4.SelectedIndex = -1;
-            }
-            if (comboBox4.Text == comboBox3.Text)
-            {
-                MessageBox.Show("error you have selected " + comboBox4.Text + " in 2 locations this one will be reset");
-                comboBox4.SelectedIndex = -1;
-            }
-            if (comboBox4.Text == comboBox2.Text)
-            {
-                MessageBox.Show("error you have selected " + comboBox4.Text + " in 2 locations this one will be reset");
-                comboBox4.SelectedIndex = -1;
-            }
+            statcheck(comboBox3);
         }
 
         private void StatRoller_Load(object sender, EventArgs e)
@@ -100,33 +83,12 @@ namespace DAndDCharRoller
 
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox4.Text == comboBox2.Text)
-            {
-                MessageBox.Show("error you have selected " + comboBox4.Text + " in 2 locations this one will be reset");
-                comboBox4.SelectedIndex = -1;
-            }
+            statcheck(comboBox5);
         }
 
         private void comboBox6_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox6.Text == comboBox1.Text)
-            {
-                MessageBox.Show("error you have selected " + comboBox6.Text + " in 2 locations this one will be reset");
-                comboBox6.SelectedIndex = -1;
-            }
-            if (comboBox6.Text == comboBox2.Text)
-            {
-                MessageBox.Show("error you have selected " + comboBox6.Text + " in 2 locations this one will be reset");
-                comboBox6.SelectedIndex = -1;
-            }
-            if (comboBox6.Text == comboBox3.Text)
-            {
-                MessageBox.Show("error you have selected " + comboBox6.Text + " in 2 locations this one will be reset");
-                comboBox6.SelectedIndex = -1;
-            }
-
-
-
+            statcheck(comboBox6);
 
         }
     }
