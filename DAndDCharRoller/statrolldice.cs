@@ -13,12 +13,11 @@ namespace DAndDCharRoller
 
 
        
-            List<byte> dicearray = new List<byte>(3);
-            dicearray[0] = (Convert.ToByte(new Dice()));
-            System.Windows.Forms.MessageBox.Show("got here");
-            dicearray[1] = (Convert.ToByte(new Dice()));
-            dicearray[2] = (Convert.ToByte(new Dice()));
-            dicearray[3] = (Convert.ToByte(new Dice()));
+            List<byte> dicearray = new List<byte>(4);
+            dicearray.Add(new Dice().Value);
+            dicearray.Add(new Dice().Value);
+            dicearray.Add(new Dice().Value);
+            dicearray.Add(new Dice().Value);
             //for (Byte i = 0; i < 4; i++)
             //{
             //   dicearray[i] = (new Dice());
