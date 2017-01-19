@@ -82,7 +82,12 @@ namespace DAndDCharRoller
 
         private void StatRoller_Load(object sender, EventArgs e)
         {
-            textBox1.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_1.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_2.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_3.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_4.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_5.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_6.Text = Convert.ToString(statrolldice.DiceRollforstats());
         }
 
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
@@ -98,7 +103,12 @@ namespace DAndDCharRoller
 
         private void btn_reroll_Click(object sender, EventArgs e)
         {
-
+            txt_1.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_2.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_3.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_4.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_5.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_6.Text = Convert.ToString(statrolldice.DiceRollforstats());
         }
     }
 }
