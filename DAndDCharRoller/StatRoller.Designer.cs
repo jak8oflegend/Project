@@ -52,6 +52,7 @@
             this.btn_reroll.TabIndex = 0;
             this.btn_reroll.Text = "Reroll";
             this.btn_reroll.UseVisualStyleBackColor = true;
+            //this.btn_reroll.Click += new System.EventHandler(this.btn_reroll_Click);
             // 
             // btn_next
             // 
