@@ -8,12 +8,28 @@ namespace DAndDCharRoller
 {
     class Dice
     {
-        public static int MAX = 6;
+        private static Random rand;
+        public Dice()
+        {
 
-        private int DiceRoll()
+            DiceRoll();
+        }
+        static Dice()
+        {
+            rand = new Random();
+
+        }
+        public Byte Value { get; private set; }
+        public Byte DiceRoll()
         {
             Random rand = new Random();
-            return rand.Next(MAX) + 1;
+             Value =  (Byte)rand.Next(1,7);
+            System.Windows.Forms.MessageBox.Show("gothere");
+            return Value; 
+            
         }
+        
+        
     }
+
 }
