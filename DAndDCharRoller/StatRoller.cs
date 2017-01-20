@@ -17,20 +17,22 @@ namespace DAndDCharRoller
 
         public StatRoller()
         {
-            
+
             InitializeComponent();
-            
+
         }
 
-        
-
-        public void  statcheck(ComboBox original){
 
 
-            statarray = new ComboBox[6] {comboBox1,comboBox2,comboBox3,comboBox4,comboBox5,comboBox6};
+        public void statcheck(ComboBox original)
+        {
+
+
+            statarray = new ComboBox[6] { c, comboBox2, comboBox3, comboBox4, comboBox5, comboBox6 };
             for (int i = 0; i < 6; i++)
             {
-                if (original.SelectedIndex >= 0 ) {
+                if (original.SelectedIndex >= 0)
+                {
                     if (original != statarray[i])
                     {
                         if (original.SelectedIndex == statarray[i].SelectedIndex)
@@ -38,7 +40,7 @@ namespace DAndDCharRoller
                             MessageBox.Show("error you have selected " + original.Text + " in 2 locations this one will be reset");
                             original.SelectedIndex = -1;
 
-                            
+
                         }
                     }
                 }
@@ -63,7 +65,7 @@ namespace DAndDCharRoller
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            statcheck(comboBox1);
+            statcheck(c);
         }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -109,6 +111,43 @@ namespace DAndDCharRoller
             txt_4.Text = Convert.ToString(statrolldice.DiceRollforstats());
             txt_5.Text = Convert.ToString(statrolldice.DiceRollforstats());
             txt_6.Text = Convert.ToString(statrolldice.DiceRollforstats());
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_next_Click(object sender, EventArgs e)
+        {
+            statarray = new ComboBox[6] { c, comboBox2, comboBox3, comboBox4, comboBox5, comboBox6 };
+            for (int i = 0; i < 6; i++)
+            {
+                if (statarray[i].SelectedIndex < 0)
+                {
+
+                    MessageBox.Show("error you have not  set one of your stats");
+
+                }
+                else
+                {
+                    if (Combobox_class.SelectedIndex < 0)
+                    {
+                        MessageBox.Show("error you have not  selected a class");
+                    }
+                    else {
+                        if (comboBox_race.SelectedIndex < 0)
+                        {
+                            MessageBox.Show("error you have not  selected a race");
+                        }
+                        else
+                        {
+
+                        }
+                    }
+                }
+
+            }
         }
     }
 }

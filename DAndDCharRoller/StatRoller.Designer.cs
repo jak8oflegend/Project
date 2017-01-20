@@ -36,7 +36,7 @@
             this.txt_3 = new System.Windows.Forms.TextBox();
             this.txt_4 = new System.Windows.Forms.TextBox();
             this.txt_5 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.c = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
@@ -44,6 +44,11 @@
             this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.directoryEntry1 = new System.DirectoryServices.DirectoryEntry();
+            this.Combobox_class = new System.Windows.Forms.ComboBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox_race = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // btn_reroll
@@ -58,12 +63,13 @@
             // 
             // btn_next
             // 
-            this.btn_next.Location = new System.Drawing.Point(177, 323);
+            this.btn_next.Location = new System.Drawing.Point(166, 333);
             this.btn_next.Name = "btn_next";
             this.btn_next.Size = new System.Drawing.Size(75, 23);
             this.btn_next.TabIndex = 1;
             this.btn_next.Text = "Next";
             this.btn_next.UseVisualStyleBackColor = true;
+            this.btn_next.Click += new System.EventHandler(this.btn_next_Click);
             // 
             // txt_6
             // 
@@ -107,21 +113,21 @@
             this.txt_5.Size = new System.Drawing.Size(100, 20);
             this.txt_5.TabIndex = 7;
             // 
-            // comboBox1
+            // c
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.c.FormattingEnabled = true;
+            this.c.Items.AddRange(new object[] {
             "Strength",
             "Dexterity",
             "Constitution",
             "Intelligence",
             "Wisdom",
             "Charisma"});
-            this.comboBox1.Location = new System.Drawing.Point(139, 37);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 8;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.c.Location = new System.Drawing.Point(139, 37);
+            this.c.Name = "c";
+            this.c.Size = new System.Drawing.Size(121, 21);
+            this.c.TabIndex = 8;
+            this.c.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // comboBox2
             // 
@@ -219,11 +225,71 @@
             this.label1.TabIndex = 15;
             this.label1.Text = "Character Name";
             // 
+            // Combobox_class
+            // 
+            this.Combobox_class.FormattingEnabled = true;
+            this.Combobox_class.Items.AddRange(new object[] {
+            "Barbarian",
+            "Bard",
+            "Cleric",
+            "Druid",
+            "Fighter",
+            "Magic-User/Mage/Wizard",
+            "Monk/Mystic",
+            "Paladin",
+            "Ranger",
+            "Sorcerer",
+            "Thief/Rogue",
+            "Warlock"});
+            this.Combobox_class.Location = new System.Drawing.Point(417, 277);
+            this.Combobox_class.Name = "Combobox_class";
+            this.Combobox_class.Size = new System.Drawing.Size(121, 21);
+            this.Combobox_class.TabIndex = 16;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(308, 276);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(80, 13);
+            this.label2.TabIndex = 17;
+            this.label2.Text = "Character class";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(308, 231);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(33, 13);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Race";
+            // 
+            // comboBox_race
+            // 
+            this.comboBox_race.FormattingEnabled = true;
+            this.comboBox_race.Items.AddRange(new object[] {
+            "Dwarf",
+            "Elf",
+            "Gnome",
+            "Half-Elves",
+            "Half-Orcs",
+            "Halfling",
+            "Human"});
+            this.comboBox_race.Location = new System.Drawing.Point(417, 232);
+            this.comboBox_race.Name = "comboBox_race";
+            this.comboBox_race.Size = new System.Drawing.Size(121, 21);
+            this.comboBox_race.TabIndex = 18;
+            // 
             // StatRoller
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(304, 358);
+            this.ClientSize = new System.Drawing.Size(636, 358);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.comboBox_race);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.Combobox_class);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.comboBox5);
@@ -231,7 +297,7 @@
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.c);
             this.Controls.Add(this.txt_5);
             this.Controls.Add(this.txt_4);
             this.Controls.Add(this.txt_3);
@@ -258,7 +324,7 @@
         private System.Windows.Forms.TextBox txt_3;
         private System.Windows.Forms.TextBox txt_4;
         private System.Windows.Forms.TextBox txt_5;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox c;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.ComboBox comboBox4;
@@ -266,5 +332,10 @@
         private System.Windows.Forms.ComboBox comboBox6;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label1;
+        private System.DirectoryServices.DirectoryEntry directoryEntry1;
+        private System.Windows.Forms.ComboBox Combobox_class;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox comboBox_race;
     }
 }
