@@ -17,6 +17,8 @@ CREATE TABLE Character
 (
 	CharID				smallint		PRIMARY KEY IDENTITY
 	,Name				varchar(30)		NOT NULL
+	,race				varchar(30)		NOT NULL
+	,jobclass			varchar(30)		NOT NULL
 	,Strength			smallint		NOT NULL
 	,Dexterity			smallint		NOT NULL
 	,Constitution		smallint		NOT NULL

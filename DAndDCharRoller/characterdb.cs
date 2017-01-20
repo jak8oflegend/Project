@@ -20,6 +20,8 @@ namespace DAndDCharRoller
             addcharacterCommand.CommandText =
                 @"INSERT INTO CharDB
 	                ( name,
+ race,
+ jobclass,
              Strength,
  Dexterity,
  Constitution,
@@ -34,6 +36,8 @@ namespace DAndDCharRoller
  Charismabonus)
 VALUES
 	                (@name,
+@race,
+@jobclass,
 @Strength,
 @Dexterity,
 @Constitution,
@@ -49,6 +53,10 @@ VALUES
 
             addcharacterCommand.Parameters
                 .AddWithValue("@Name", character.name);
+            addcharacterCommand.Parameters
+    .AddWithValue("@race", character.name);
+            addcharacterCommand.Parameters
+    .AddWithValue("@jobclass", character.name);
             addcharacterCommand.Parameters
     .AddWithValue("@Strength", character.Strength);
             addcharacterCommand.Parameters

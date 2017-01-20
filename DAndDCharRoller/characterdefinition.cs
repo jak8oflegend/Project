@@ -10,6 +10,8 @@ namespace DAndDCharRoller
     {
         public character() { }
         public character(string name,
+            string race,
+            string jobclass,
             int Strength,
 int Dexterity,
 int Constitution,
@@ -25,6 +27,8 @@ int Charismabonus
 )
         {
             this.name = name;
+            this.race = race;
+            this.jobclass = jobclass;
             this.Strength = Strength;
             this.Dexterity = Dexterity;
             this.Constitution = Constitution;
@@ -40,6 +44,8 @@ int Charismabonus
 
         }
         public string name { get; set; }
+        public string race { get; set; }
+        public string jobclass { get; set; }
         public int Strength { get; set; }
         public int Dexterity { get; set; }
         public int Constitution { get; set; }

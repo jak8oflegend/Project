@@ -142,7 +142,8 @@ namespace DAndDCharRoller
                         }
                         else
                         {
-
+                            ///implement stats
+                            
                         }
                     }
                 }
