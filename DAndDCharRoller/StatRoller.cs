@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace DAndDCharRoller
 {
     public partial class StatRoller : Form
@@ -18,11 +19,14 @@ namespace DAndDCharRoller
         {
             
             InitializeComponent();
+            
         }
 
         
 
         public void  statcheck(ComboBox original){
+
+
             statarray = new ComboBox[6] {comboBox1,comboBox2,comboBox3,comboBox4,comboBox5,comboBox6};
             for (int i = 0; i < 6; i++)
             {
@@ -78,7 +82,12 @@ namespace DAndDCharRoller
 
         private void StatRoller_Load(object sender, EventArgs e)
         {
-
+            txt_1.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_2.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_3.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_4.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_5.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_6.Text = Convert.ToString(statrolldice.DiceRollforstats());
         }
 
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
@@ -90,6 +99,16 @@ namespace DAndDCharRoller
         {
             statcheck(comboBox6);
 
+        }
+
+        private void btn_reroll_Click(object sender, EventArgs e)
+        {
+            txt_1.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_2.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_3.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_4.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_5.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_6.Text = Convert.ToString(statrolldice.DiceRollforstats());
         }
     }
 }

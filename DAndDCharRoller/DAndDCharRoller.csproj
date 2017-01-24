@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="characterdb.cs" />
+    <Compile Include="characterdefinition.cs" />
+    <Compile Include="DBHelper.cs" />
     <Compile Include="Dice.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -53,6 +56,7 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="statrolldice.cs" />
     <Compile Include="StatRoller.cs">
       <SubType>Form</SubType>
     </Compile>
