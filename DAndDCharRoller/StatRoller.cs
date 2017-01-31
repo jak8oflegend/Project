@@ -28,7 +28,7 @@ namespace DAndDCharRoller
         {
 
 
-            statarray = new ComboBox[6] { c, comboBox2, comboBox3, comboBox4, comboBox5, comboBox6 };
+            statarray = new ComboBox[6] { comboBox1, comboBox2, comboBox3, comboBox4, comboBox5, comboBox6 };
             for (int i = 0; i < 6; i++)
             {
                 if (original.SelectedIndex >= 0)
@@ -65,7 +65,7 @@ namespace DAndDCharRoller
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            statcheck(c);
+            statcheck(comboBox1);
         }
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -120,7 +120,7 @@ namespace DAndDCharRoller
 
         private void btn_next_Click(object sender, EventArgs e)
         {
-            statarray = new ComboBox[6] { c, comboBox2, comboBox3, comboBox4, comboBox5, comboBox6 };
+            statarray = new ComboBox[6] { comboBox1, comboBox2, comboBox3, comboBox4, comboBox5, comboBox6 };
             for (int i = 0; i < 6; i++)
             {
                 if (statarray[i].SelectedIndex < 0)
@@ -142,8 +142,37 @@ namespace DAndDCharRoller
                         }
                         else
                         {
-                            ///implement stats
+                            if (cmbo_alighnment.SelectedIndex < 0)
+                            {
+                                MessageBox.Show("error you have not  selected an alighnment(good/evil/netural)");
+                            }
+                            else
+                            {
+
+                                if (cmbo_law.SelectedIndex < 0)
+                                {
+                                    MessageBox.Show("error you have not  selected an alighnment(lawful/chaotic/netural)");
+                                }
+                                else
+                                {
+                                    //get name
+                                    string name = txt_name.Text;
+                                    //get alighnment
+                                    string alighnment = cmbo_law.Text + " " + cmbo_alighnment;
+                                    string characterclass = Combobox_class.Text;
+                                    string template = null; //comboBox_template// not yet implemented
+                                    string[] statarray2;
+                                   statarray2 = new string[6] { comboBox_dicerolls.Text, comboBox2.Text, comboBox3.Text, comboBox4.Text, comboBox5.Text, comboBox6.Text };
+                                    int[] valuearray;
+                                    valuearray = new int[6] { Convert.ToInt16(txt_1.Text), Convert.ToInt16(txt_2.Text), Convert.ToInt16(txt_3.Text), Convert.ToInt16(txt_4.Text), Convert.ToInt16(txt_5.Text), Convert.ToInt16(txt_6.Text) };
+                                    string race = comboBox_race.Text;
+                                    createcharacter.go(name, alighnment, characterclass, template,race, statarray2, valuearray);
+
+                                }
+
+                            }
                             
+
                         }
                     }
                 }

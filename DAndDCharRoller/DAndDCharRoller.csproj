@@ -49,6 +49,7 @@
   <ItemGroup>
     <Compile Include="characterdb.cs" />
     <Compile Include="characterdefinition.cs" />
+    <Compile Include="createcharacter.cs" />
     <Compile Include="DBHelper.cs" />
     <Compile Include="Dice.cs" />
     <Compile Include="MainForm.cs">
