@@ -27,7 +27,7 @@ namespace DAndDCharRoller
         public void statcheck(ComboBox original)
         {
 
-
+            /// checks to make sure no stat is duplicated so no stat is left null
             statarray = new ComboBox[6] { comboBox1, comboBox2, comboBox3, comboBox4, comboBox5, comboBox6 };
             for (int i = 0; i < 6; i++)
             {
@@ -84,12 +84,13 @@ namespace DAndDCharRoller
 
         private void StatRoller_Load(object sender, EventArgs e)
         {
-            txt_1.Text = Convert.ToString(statrolldice.DiceRollforstats());
-            txt_2.Text = Convert.ToString(statrolldice.DiceRollforstats());
-            txt_3.Text = Convert.ToString(statrolldice.DiceRollforstats());
-            txt_4.Text = Convert.ToString(statrolldice.DiceRollforstats());
-            txt_5.Text = Convert.ToString(statrolldice.DiceRollforstats());
-            txt_6.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            ///loads a stat roll when form loads
+            txt_stat1.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_stat2.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_stat3.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_stat4.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_stat5.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_stat6.Text = Convert.ToString(statrolldice.DiceRollforstats());
         }
 
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
@@ -105,12 +106,12 @@ namespace DAndDCharRoller
 
         private void btn_reroll_Click(object sender, EventArgs e)
         {
-            txt_1.Text = Convert.ToString(statrolldice.DiceRollforstats());
-            txt_2.Text = Convert.ToString(statrolldice.DiceRollforstats());
-            txt_3.Text = Convert.ToString(statrolldice.DiceRollforstats());
-            txt_4.Text = Convert.ToString(statrolldice.DiceRollforstats());
-            txt_5.Text = Convert.ToString(statrolldice.DiceRollforstats());
-            txt_6.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_stat1.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_stat2.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_stat3.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_stat4.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_stat5.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            txt_stat6.Text = Convert.ToString(statrolldice.DiceRollforstats());
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -120,6 +121,7 @@ namespace DAndDCharRoller
 
         private void btn_next_Click(object sender, EventArgs e)
         {
+            ///runs errorchecking to prevent crashes
             statarray = new ComboBox[6] { comboBox1, comboBox2, comboBox3, comboBox4, comboBox5, comboBox6 };
             for (int i = 0; i < 6; i++)
             {
@@ -155,16 +157,16 @@ namespace DAndDCharRoller
                                 }
                                 else
                                 {
-                                    //get name
+                                    ///get name
                                     string name = txt_name.Text;
-                                    //get alighnment
+                                    ///get alighnment
                                     string alighnment = cmbo_law.Text + " " + cmbo_alighnment;
                                     string characterclass = Combobox_class.Text;
-                                    string template = null; //comboBox_template// not yet implemented
+                                    string template = null; ///comboBox_template/// not yet implemented
                                     string[] statarray2;
                                    statarray2 = new string[6] { comboBox_dicerolls.Text, comboBox2.Text, comboBox3.Text, comboBox4.Text, comboBox5.Text, comboBox6.Text };
                                     int[] valuearray;
-                                    valuearray = new int[6] { Convert.ToInt16(txt_1.Text), Convert.ToInt16(txt_2.Text), Convert.ToInt16(txt_3.Text), Convert.ToInt16(txt_4.Text), Convert.ToInt16(txt_5.Text), Convert.ToInt16(txt_6.Text) };
+                                    valuearray = new int[6] { Convert.ToInt16(txt_stat1.Text), Convert.ToInt16(txt_stat2.Text), Convert.ToInt16(txt_stat3.Text), Convert.ToInt16(txt_stat4.Text), Convert.ToInt16(txt_stat5.Text), Convert.ToInt16(txt_stat6.Text) };
                                     string race = comboBox_race.Text;
                                     createcharacter.go(name, alighnment, characterclass, template,race, statarray2, valuearray);
 

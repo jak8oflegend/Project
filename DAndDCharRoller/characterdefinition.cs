@@ -6,6 +6,12 @@ using System.Threading.Tasks;
 
 namespace DAndDCharRoller
 {
+    /// <summary>
+    /// defines character for adding to db
+    /// todo: add alighnment
+    /// todo: add template once it is implemented
+    /// todo: add in the skills once form3 is implemented and skills are implemented
+    /// </summary>
     public class character
     {
         public character() { }

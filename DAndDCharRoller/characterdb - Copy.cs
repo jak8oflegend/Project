@@ -7,17 +7,10 @@ using System.Threading.Tasks;
 
 namespace DAndDCharRoller
 {
-    /// <summary>
-    /// accesses the database and stores to database
-    /// todo: add alighnment
-    /// todo: add template once it is implemented
-    /// todo: add in the skills once form3 is implemented and skills are implemented
-    /// </summary>
     class characterdb
     {
         public static bool Addcharacter(character character)
         {
-            ///adds character to db
             SqlConnection con =
                 DBHelper.GetConnection();
 

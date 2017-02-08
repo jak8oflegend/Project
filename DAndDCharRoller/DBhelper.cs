@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 
 namespace DAndDCharRoller
 {
+    /// <summary>
+    /// allows access to database
+    /// </summary>
     class DBHelper
     {
         public static SqlConnection GetConnection()

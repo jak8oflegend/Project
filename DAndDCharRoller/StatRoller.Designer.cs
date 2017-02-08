@@ -30,12 +30,12 @@
         {
             this.btn_reroll = new System.Windows.Forms.Button();
             this.btn_next = new System.Windows.Forms.Button();
-            this.txt_6 = new System.Windows.Forms.TextBox();
-            this.txt_1 = new System.Windows.Forms.TextBox();
-            this.txt_2 = new System.Windows.Forms.TextBox();
-            this.txt_3 = new System.Windows.Forms.TextBox();
-            this.txt_4 = new System.Windows.Forms.TextBox();
-            this.txt_5 = new System.Windows.Forms.TextBox();
+            this.txt_stat6 = new System.Windows.Forms.TextBox();
+            this.txt_stat1 = new System.Windows.Forms.TextBox();
+            this.txt_stat2 = new System.Windows.Forms.TextBox();
+            this.txt_stat3 = new System.Windows.Forms.TextBox();
+            this.txt_stat4 = new System.Windows.Forms.TextBox();
+            this.txt_stat5 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -78,47 +78,47 @@
             this.btn_next.UseVisualStyleBackColor = true;
             this.btn_next.Click += new System.EventHandler(this.btn_next_Click);
             // 
-            // txt_6
+            // txt_stat6
             // 
-            this.txt_6.Location = new System.Drawing.Point(0, 277);
-            this.txt_6.Name = "txt_6";
-            this.txt_6.Size = new System.Drawing.Size(100, 20);
-            this.txt_6.TabIndex = 2;
+            this.txt_stat6.Location = new System.Drawing.Point(0, 277);
+            this.txt_stat6.Name = "txt_stat6";
+            this.txt_stat6.Size = new System.Drawing.Size(100, 20);
+            this.txt_stat6.TabIndex = 2;
             // 
-            // txt_1
+            // txt_stat1
             // 
-            this.txt_1.Location = new System.Drawing.Point(0, 39);
-            this.txt_1.Name = "txt_1";
-            this.txt_1.Size = new System.Drawing.Size(100, 20);
-            this.txt_1.TabIndex = 3;
+            this.txt_stat1.Location = new System.Drawing.Point(0, 39);
+            this.txt_stat1.Name = "txt_stat1";
+            this.txt_stat1.Size = new System.Drawing.Size(100, 20);
+            this.txt_stat1.TabIndex = 3;
             // 
-            // txt_2
+            // txt_stat2
             // 
-            this.txt_2.Location = new System.Drawing.Point(0, 84);
-            this.txt_2.Name = "txt_2";
-            this.txt_2.Size = new System.Drawing.Size(100, 20);
-            this.txt_2.TabIndex = 4;
+            this.txt_stat2.Location = new System.Drawing.Point(0, 84);
+            this.txt_stat2.Name = "txt_stat2";
+            this.txt_stat2.Size = new System.Drawing.Size(100, 20);
+            this.txt_stat2.TabIndex = 4;
             // 
-            // txt_3
+            // txt_stat3
             // 
-            this.txt_3.Location = new System.Drawing.Point(0, 143);
-            this.txt_3.Name = "txt_3";
-            this.txt_3.Size = new System.Drawing.Size(100, 20);
-            this.txt_3.TabIndex = 5;
+            this.txt_stat3.Location = new System.Drawing.Point(0, 143);
+            this.txt_stat3.Name = "txt_stat3";
+            this.txt_stat3.Size = new System.Drawing.Size(100, 20);
+            this.txt_stat3.TabIndex = 5;
             // 
-            // txt_4
+            // txt_stat4
             // 
-            this.txt_4.Location = new System.Drawing.Point(0, 191);
-            this.txt_4.Name = "txt_4";
-            this.txt_4.Size = new System.Drawing.Size(100, 20);
-            this.txt_4.TabIndex = 6;
+            this.txt_stat4.Location = new System.Drawing.Point(0, 191);
+            this.txt_stat4.Name = "txt_stat4";
+            this.txt_stat4.Size = new System.Drawing.Size(100, 20);
+            this.txt_stat4.TabIndex = 6;
             // 
-            // txt_5
+            // txt_stat5
             // 
-            this.txt_5.Location = new System.Drawing.Point(0, 233);
-            this.txt_5.Name = "txt_5";
-            this.txt_5.Size = new System.Drawing.Size(100, 20);
-            this.txt_5.TabIndex = 7;
+            this.txt_stat5.Location = new System.Drawing.Point(0, 233);
+            this.txt_stat5.Name = "txt_stat5";
+            this.txt_stat5.Size = new System.Drawing.Size(100, 20);
+            this.txt_stat5.TabIndex = 7;
             // 
             // comboBox1
             // 
@@ -385,12 +385,12 @@
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.txt_5);
-            this.Controls.Add(this.txt_4);
-            this.Controls.Add(this.txt_3);
-            this.Controls.Add(this.txt_2);
-            this.Controls.Add(this.txt_1);
-            this.Controls.Add(this.txt_6);
+            this.Controls.Add(this.txt_stat5);
+            this.Controls.Add(this.txt_stat4);
+            this.Controls.Add(this.txt_stat3);
+            this.Controls.Add(this.txt_stat2);
+            this.Controls.Add(this.txt_stat1);
+            this.Controls.Add(this.txt_stat6);
             this.Controls.Add(this.btn_next);
             this.Controls.Add(this.btn_reroll);
             this.Name = "StatRoller";
@@ -405,12 +405,12 @@
 
         private System.Windows.Forms.Button btn_reroll;
         private System.Windows.Forms.Button btn_next;
-        private System.Windows.Forms.TextBox txt_6;
-        private System.Windows.Forms.TextBox txt_1;
-        private System.Windows.Forms.TextBox txt_2;
-        private System.Windows.Forms.TextBox txt_3;
-        private System.Windows.Forms.TextBox txt_4;
-        private System.Windows.Forms.TextBox txt_5;
+        private System.Windows.Forms.TextBox txt_stat6;
+        private System.Windows.Forms.TextBox txt_stat1;
+        private System.Windows.Forms.TextBox txt_stat2;
+        private System.Windows.Forms.TextBox txt_stat3;
+        private System.Windows.Forms.TextBox txt_stat4;
+        private System.Windows.Forms.TextBox txt_stat5;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox3;

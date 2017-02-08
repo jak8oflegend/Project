@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="characterdb - Copy.cs" />
     <Compile Include="characterdb.cs" />
     <Compile Include="characterdefinition.cs" />
     <Compile Include="createcharacter.cs" />
