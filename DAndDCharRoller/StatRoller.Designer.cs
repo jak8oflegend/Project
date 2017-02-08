@@ -80,6 +80,7 @@
             // 
             // txt_stat6
             // 
+            this.txt_stat6.Enabled = false;
             this.txt_stat6.Location = new System.Drawing.Point(0, 277);
             this.txt_stat6.Name = "txt_stat6";
             this.txt_stat6.Size = new System.Drawing.Size(100, 20);
@@ -87,6 +88,7 @@
             // 
             // txt_stat1
             // 
+            this.txt_stat1.Enabled = false;
             this.txt_stat1.Location = new System.Drawing.Point(0, 39);
             this.txt_stat1.Name = "txt_stat1";
             this.txt_stat1.Size = new System.Drawing.Size(100, 20);
@@ -94,6 +96,7 @@
             // 
             // txt_stat2
             // 
+            this.txt_stat2.Enabled = false;
             this.txt_stat2.Location = new System.Drawing.Point(0, 84);
             this.txt_stat2.Name = "txt_stat2";
             this.txt_stat2.Size = new System.Drawing.Size(100, 20);
@@ -101,6 +104,7 @@
             // 
             // txt_stat3
             // 
+            this.txt_stat3.Enabled = false;
             this.txt_stat3.Location = new System.Drawing.Point(0, 143);
             this.txt_stat3.Name = "txt_stat3";
             this.txt_stat3.Size = new System.Drawing.Size(100, 20);
@@ -108,6 +112,7 @@
             // 
             // txt_stat4
             // 
+            this.txt_stat4.Enabled = false;
             this.txt_stat4.Location = new System.Drawing.Point(0, 191);
             this.txt_stat4.Name = "txt_stat4";
             this.txt_stat4.Size = new System.Drawing.Size(100, 20);
@@ -115,6 +120,7 @@
             // 
             // txt_stat5
             // 
+            this.txt_stat5.Enabled = false;
             this.txt_stat5.Location = new System.Drawing.Point(0, 233);
             this.txt_stat5.Name = "txt_stat5";
             this.txt_stat5.Size = new System.Drawing.Size(100, 20);
