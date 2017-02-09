@@ -262,17 +262,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(308, 276);
+            this.label2.Location = new System.Drawing.Point(304, 276);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(80, 13);
+            this.label2.Size = new System.Drawing.Size(81, 13);
             this.label2.TabIndex = 17;
-            this.label2.Text = "Character class";
+            this.label2.Text = "Character Class";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(308, 231);
+            this.label3.Location = new System.Drawing.Point(304, 232);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 19;
@@ -297,11 +297,11 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(298, 150);
+            this.label4.Location = new System.Drawing.Point(304, 150);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(58, 13);
+            this.label4.Size = new System.Drawing.Size(53, 13);
             this.label4.TabIndex = 23;
-            this.label4.Text = "alighnment";
+            this.label4.Text = "Alignment";
             // 
             // cmbo_law
             // 
@@ -310,7 +310,7 @@
             "Lawful",
             "neutral",
             "Chaotic"});
-            this.cmbo_law.Location = new System.Drawing.Point(385, 142);
+            this.cmbo_law.Location = new System.Drawing.Point(385, 145);
             this.cmbo_law.Name = "cmbo_law";
             this.cmbo_law.Size = new System.Drawing.Size(121, 21);
             this.cmbo_law.TabIndex = 22;
@@ -318,7 +318,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(308, 190);
+            this.label5.Location = new System.Drawing.Point(304, 190);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 21;
@@ -339,7 +339,7 @@
             "good",
             "neutral",
             "evil"});
-            this.cmbo_alighnment.Location = new System.Drawing.Point(512, 142);
+            this.cmbo_alighnment.Location = new System.Drawing.Point(512, 145);
             this.cmbo_alighnment.Name = "cmbo_alighnment";
             this.cmbo_alighnment.Size = new System.Drawing.Size(121, 21);
             this.cmbo_alighnment.TabIndex = 24;
@@ -347,11 +347,11 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(-3, 13);
+            this.label6.Location = new System.Drawing.Point(0, 13);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(119, 13);
+            this.label6.Size = new System.Drawing.Size(129, 13);
             this.label6.TabIndex = 26;
-            this.label6.Text = "change dice roll options";
+            this.label6.Text = "Change Dice Roll Options";
             // 
             // comboBox_dicerolls
             // 

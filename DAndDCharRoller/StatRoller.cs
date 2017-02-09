@@ -85,6 +85,11 @@ namespace DAndDCharRoller
         private void StatRoller_Load(object sender, EventArgs e)
         {
             ///loads a stat roll when form loads
+            DiceRoll();
+        }
+
+        private void DiceRoll()
+        {
             txt_stat1.Text = Convert.ToString(statrolldice.DiceRollforstats());
             txt_stat2.Text = Convert.ToString(statrolldice.DiceRollforstats());
             txt_stat3.Text = Convert.ToString(statrolldice.DiceRollforstats());
@@ -106,12 +111,7 @@ namespace DAndDCharRoller
 
         private void btn_reroll_Click(object sender, EventArgs e)
         {
-            txt_stat1.Text = Convert.ToString(statrolldice.DiceRollforstats());
-            txt_stat2.Text = Convert.ToString(statrolldice.DiceRollforstats());
-            txt_stat3.Text = Convert.ToString(statrolldice.DiceRollforstats());
-            txt_stat4.Text = Convert.ToString(statrolldice.DiceRollforstats());
-            txt_stat5.Text = Convert.ToString(statrolldice.DiceRollforstats());
-            txt_stat6.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            DiceRoll();
         }
 
         private void label2_Click(object sender, EventArgs e)
