@@ -52,6 +52,12 @@
     <Compile Include="createcharacter.cs" />
     <Compile Include="DBHelper.cs" />
     <Compile Include="Dice.cs" />
+    <Compile Include="skills.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="skills.Designer.cs">
+      <DependentUpon>skills.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +73,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="skills.resx">
+      <DependentUpon>skills.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
