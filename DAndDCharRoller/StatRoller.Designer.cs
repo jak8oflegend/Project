@@ -366,6 +366,7 @@
             this.comboBox_dicerolls.Name = "comboBox_dicerolls";
             this.comboBox_dicerolls.Size = new System.Drawing.Size(121, 21);
             this.comboBox_dicerolls.TabIndex = 25;
+            this.comboBox_dicerolls.SelectedIndexChanged += new System.EventHandler(this.comboBox_dicerolls_SelectedIndexChanged);
             // 
             // StatRoller
             // 

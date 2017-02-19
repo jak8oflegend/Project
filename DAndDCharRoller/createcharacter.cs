@@ -32,10 +32,6 @@ namespace DAndDCharRoller
                 {
                     strength = valuearray[i];
                 }
-                if (statarray2[i] == "strength")
-                {
-                    strength = valuearray[i];
-                }
                 if (statarray2[i] == "dexterity")
                 {
                     dexterity = valuearray[i];
