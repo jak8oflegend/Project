@@ -230,5 +230,10 @@ namespace DAndDCharRoller
 
             }
         }
+
+        private void comboBox_dicerolls_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
