@@ -89,7 +89,7 @@
             // txt_stat1
             // 
             this.txt_stat1.Enabled = false;
-            this.txt_stat1.Location = new System.Drawing.Point(0, 39);
+            this.txt_stat1.Location = new System.Drawing.Point(0, 53);
             this.txt_stat1.Name = "txt_stat1";
             this.txt_stat1.Size = new System.Drawing.Size(100, 20);
             this.txt_stat1.TabIndex = 3;
@@ -97,7 +97,7 @@
             // txt_stat2
             // 
             this.txt_stat2.Enabled = false;
-            this.txt_stat2.Location = new System.Drawing.Point(0, 84);
+            this.txt_stat2.Location = new System.Drawing.Point(0, 98);
             this.txt_stat2.Name = "txt_stat2";
             this.txt_stat2.Size = new System.Drawing.Size(100, 20);
             this.txt_stat2.TabIndex = 4;
@@ -136,7 +136,7 @@
             "Intelligence",
             "Wisdom",
             "Charisma"});
-            this.comboBox1.Location = new System.Drawing.Point(139, 37);
+            this.comboBox1.Location = new System.Drawing.Point(139, 51);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 8;
@@ -152,7 +152,7 @@
             "Intelligence",
             "Wisdom",
             "Charisma"});
-            this.comboBox2.Location = new System.Drawing.Point(139, 83);
+            this.comboBox2.Location = new System.Drawing.Point(139, 97);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(121, 21);
             this.comboBox2.TabIndex = 9;
@@ -357,8 +357,8 @@
             // 
             this.comboBox_dicerolls.FormattingEnabled = true;
             this.comboBox_dicerolls.Items.AddRange(new object[] {
-            "3d6",
             "4d6 drop 1",
+            "3d6",
             "5d6 drop 2",
             "elite array ",
             "non elite array"});

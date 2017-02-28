@@ -27,13 +27,10 @@ namespace DAndDCharRoller
         {
             int DiceValue = 7;///value of dice +1 due to non inclusive random
             int MinDiceValue = 1;///min value is inclusve
-             Value =  (Byte)rand.Next(MinDiceValue,DiceValue);
+            Value =  (Byte)rand.Next(MinDiceValue,DiceValue);
 
             return Value; 
             
         }
-        
-        
     }
-
 }

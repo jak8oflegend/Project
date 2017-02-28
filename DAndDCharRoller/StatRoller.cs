@@ -98,6 +98,55 @@ namespace DAndDCharRoller
             txt_stat6.Text = Convert.ToString(statrolldice.DiceRollforstats());
         }
 
+        private void ReRoll()
+        {
+            if (comboBox_dicerolls.SelectedIndex == 0)
+            {
+                txt_stat1.Text = Convert.ToString(statrolldice.DiceRollforstats());
+                txt_stat2.Text = Convert.ToString(statrolldice.DiceRollforstats());
+                txt_stat3.Text = Convert.ToString(statrolldice.DiceRollforstats());
+                txt_stat4.Text = Convert.ToString(statrolldice.DiceRollforstats());
+                txt_stat5.Text = Convert.ToString(statrolldice.DiceRollforstats());
+                txt_stat6.Text = Convert.ToString(statrolldice.DiceRollforstats());
+            }
+            if (comboBox_dicerolls.SelectedIndex == 1)
+            {
+                txt_stat1.Text = Convert.ToString(statrolldice.DiceRollforstats3d6());
+                txt_stat2.Text = Convert.ToString(statrolldice.DiceRollforstats3d6());
+                txt_stat3.Text = Convert.ToString(statrolldice.DiceRollforstats3d6());
+                txt_stat4.Text = Convert.ToString(statrolldice.DiceRollforstats3d6());
+                txt_stat5.Text = Convert.ToString(statrolldice.DiceRollforstats3d6());
+                txt_stat6.Text = Convert.ToString(statrolldice.DiceRollforstats3d6());
+            }
+            if (comboBox_dicerolls.SelectedIndex == 2)
+            {
+                txt_stat1.Text = Convert.ToString(statrolldice.DiceRollforstats5d6());
+                txt_stat2.Text = Convert.ToString(statrolldice.DiceRollforstats5d6());
+                txt_stat3.Text = Convert.ToString(statrolldice.DiceRollforstats5d6());
+                txt_stat4.Text = Convert.ToString(statrolldice.DiceRollforstats5d6());
+                txt_stat5.Text = Convert.ToString(statrolldice.DiceRollforstats5d6());
+                txt_stat6.Text = Convert.ToString(statrolldice.DiceRollforstats5d6());
+            }
+            if (comboBox_dicerolls.SelectedIndex == 3)
+            {
+                txt_stat1.Text = 15.ToString();
+                txt_stat2.Text = 14.ToString();
+                txt_stat3.Text = 13.ToString();
+                txt_stat4.Text = 12.ToString();
+                txt_stat5.Text = 10.ToString();
+                txt_stat6.Text = 8.ToString();
+            }
+            if (comboBox_dicerolls.SelectedIndex == 4)
+            {
+                txt_stat1.Text = 13.ToString();
+                txt_stat2.Text = 12.ToString();
+                txt_stat3.Text = 11.ToString();
+                txt_stat4.Text = 10.ToString();
+                txt_stat5.Text = 9.ToString();
+                txt_stat6.Text = 8.ToString();
+            }
+        }
+
         private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
         {
             statcheck(comboBox5);
@@ -111,7 +160,7 @@ namespace DAndDCharRoller
 
         private void btn_reroll_Click(object sender, EventArgs e)
         {
-            DiceRoll();
+            ReRoll();
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -135,25 +184,25 @@ namespace DAndDCharRoller
                 {
                     if (Combobox_class.SelectedIndex < 0)
                     {
-                        MessageBox.Show("error you have not  selected a class");
+                        MessageBox.Show("error you have not selected a class");
                     }
                     else {
                         if (comboBox_race.SelectedIndex < 0)
                         {
-                            MessageBox.Show("error you have not  selected a race");
+                            MessageBox.Show("error you have not selected a race");
                         }
                         else
                         {
                             if (cmbo_alighnment.SelectedIndex < 0)
                             {
-                                MessageBox.Show("error you have not  selected an alighnment(good/evil/netural)");
+                                MessageBox.Show("error you have not selected an alighnment(good/evil/netural)");
                             }
                             else
                             {
 
                                 if (cmbo_law.SelectedIndex < 0)
                                 {
-                                    MessageBox.Show("error you have not  selected an alighnment(lawful/chaotic/netural)");
+                                    MessageBox.Show("error you have not selected an alighnment(lawful/chaotic/netural)");
                                 }
                                 else
                                 {
@@ -164,7 +213,7 @@ namespace DAndDCharRoller
                                     string characterclass = Combobox_class.Text;
                                     string template = null; ///comboBox_template/// not yet implemented
                                     string[] statarray2;
-                                   statarray2 = new string[6] { comboBox_dicerolls.Text, comboBox2.Text, comboBox3.Text, comboBox4.Text, comboBox5.Text, comboBox6.Text };
+                                    statarray2 = new string[6] { comboBox_dicerolls.Text, comboBox2.Text, comboBox3.Text, comboBox4.Text, comboBox5.Text, comboBox6.Text };
                                     int[] valuearray;
                                     valuearray = new int[6] { Convert.ToInt16(txt_stat1.Text), Convert.ToInt16(txt_stat2.Text), Convert.ToInt16(txt_stat3.Text), Convert.ToInt16(txt_stat4.Text), Convert.ToInt16(txt_stat5.Text), Convert.ToInt16(txt_stat6.Text) };
                                     string race = comboBox_race.Text;
