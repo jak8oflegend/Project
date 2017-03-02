@@ -170,7 +170,119 @@ namespace DAndDCharRoller
 
         private void btn_next_Click(object sender, EventArgs e)
         {
+            skillsdefinition[] skillList;
+            skillsdefinition appraise = new skillsdefinition("Appraise", 0);
+            skillsdefinition balance = new skillsdefinition("Balance", 0);
+            skillsdefinition bluff = new skillsdefinition("Bluff", 0);
+            skillsdefinition climb = new skillsdefinition("Climb", 0);
+            skillsdefinition concentrate = new skillsdefinition("Concentrate", 0);
+            skillsdefinition craft1 = new skillsdefinition("Craft 1", 0);
+            skillsdefinition craft2 = new skillsdefinition("Craft 2", 0);
+            skillsdefinition craft3 = new skillsdefinition("craft 3", 0);
+            skillsdefinition deciferScript = new skillsdefinition("Decifer Script", 0);
+            skillsdefinition diplomacy = new skillsdefinition("Diplomacy", 0);
+            skillsdefinition disableDevice = new skillsdefinition("Disable Device", 0);
+            skillsdefinition disguise = new skillsdefinition("Disguise", 0);
+            skillsdefinition escapeArtist = new skillsdefinition("Escape Artist", 0);
+            skillsdefinition forgery = new skillsdefinition("Forgery", 0);
+            skillsdefinition gatherInformation = new skillsdefinition("Gather Information", 0);
+            skillsdefinition handleanimal = new skillsdefinition("Handle Animal", 0);
+            skillsdefinition heal = new skillsdefinition("Heal", 0);
+            skillsdefinition intimidate = new skillsdefinition("Intimidate", 0);
+            skillsdefinition jump = new skillsdefinition("jump", 0);
+            skillsdefinition arcana = new skillsdefinition("Knowledge(Arcana)", 0);
+            skillsdefinition Architecture = new skillsdefinition("Knowledge(architecture)", 0);
+            skillsdefinition dungeonereing = new skillsdefinition("Knowledge(Dungeoneering)", 0);
+            skillsdefinition geography = new skillsdefinition("Knowledge(Geography)", 0);
+            skillsdefinition history = new skillsdefinition("Knowledge(history)", 0);
+            skillsdefinition local = new skillsdefinition("Knowledge(local)", 0);
+            skillsdefinition nature = new skillsdefinition("Knowledge(nature)", 0);
+            skillsdefinition noble = new skillsdefinition("Knowledge(noble)", 0);
+            skillsdefinition religion = new skillsdefinition("Knowledge(religion)", 0);
+            skillsdefinition planes = new skillsdefinition("Knowledge(planes)", 0);
+            skillsdefinition listen = new skillsdefinition("listen", 0);
+            skillsdefinition moveSilently = new skillsdefinition("Move Silently", 0);
+            skillsdefinition openLock = new skillsdefinition("Open lock", 0);
+            skillsdefinition preform1 = new skillsdefinition("Preform 1", 0);
+            skillsdefinition preform2 = new skillsdefinition("Preform 2", 0);
+            skillsdefinition preform3 = new skillsdefinition("Preform 3", 0);
+            skillsdefinition preform4 = new skillsdefinition("Preform 4", 0);
+            skillsdefinition preform5 = new skillsdefinition("preform 5", 0);
+            skillsdefinition profession = new skillsdefinition("Profession", 0);
+            skillsdefinition ride = new skillsdefinition("Ride", 0);
+            skillsdefinition search = new skillsdefinition("Search", 0);
+            skillsdefinition senseMotive = new skillsdefinition("Sense Motive", 0);
+            skillsdefinition sleightOfHand = new skillsdefinition("Sleight of Hand", 0);
+            skillsdefinition speakLanguage = new skillsdefinition("Speak Language ", 0);
+            skillsdefinition spellcraft = new skillsdefinition("Spell Craft", 0);
+            skillsdefinition spot = new skillsdefinition("Spot", 0);
+            skillsdefinition survival = new skillsdefinition("Survival", 0);
+            skillsdefinition swim = new skillsdefinition("Swim", 0);
+            skillsdefinition tumble = new skillsdefinition("Tumble", 0);
+            skillsdefinition useMagicDevice = new skillsdefinition("Use Magic Device", 0);
+            skillsdefinition useRope= new skillsdefinition("Use Rope", 0);
+            skillsdefinition autohypnosis = new skillsdefinition("Auto Hypnosis", 0);
+            skillsdefinition psionics = new skillsdefinition("Psionics", 0);
+            skillsdefinition psicraft = new skillsdefinition("Psi craft", 0);
+            skillsdefinition usePsi = new skillsdefinition("Use Psi", 0);
+            skillList = new skillsdefinition[54] {
+              appraise ,
+              balance ,
+              bluff ,
+              climb ,
+              concentrate ,
+              craft1 ,
+              craft2 ,
+              craft3 ,
+              deciferScript ,
+              diplomacy ,
+              disableDevice ,
+              disguise ,
+              escapeArtist ,
+              forgery ,
+              gatherInformation ,
+              handleanimal ,
+              heal ,
+              intimidate ,
+              jump ,
+              arcana ,
+              Architecture ,
+              dungeonereing ,
+              geography ,
+              history ,
+              local ,
+              nature ,
+              noble ,
+              religion ,
+              planes ,
+              listen ,
+              moveSilently ,
+              openLock ,
+              preform1 ,
+              preform2 ,
+              preform3 ,
+              preform4 ,
+              preform5 ,
+              profession ,
+              ride ,
+              search ,
+              senseMotive ,
+              sleightOfHand ,
+              speakLanguage ,
+              spellcraft ,
+              spot ,
+              survival ,
+              swim ,
+              tumble ,
+              useMagicDevice ,
+              useRope,
+              autohypnosis ,
+              psionics ,
+              psicraft ,
+              usePsi  };
+
             ///runs errorchecking to prevent crashes
+            ///to do clean this up
             statarray = new ComboBox[6] { comboBox1, comboBox2, comboBox3, comboBox4, comboBox5, comboBox6 };
             for (int i = 0; i < 6; i++)
             {
@@ -209,15 +321,15 @@ namespace DAndDCharRoller
                                     ///get name
                                     string name = txt_name.Text;
                                     ///get alighnment
-                                    string alighnment = cmbo_law.Text + " " + cmbo_alighnment;
+                                    string alighnment = cmbo_law.Text + " " + cmbo_alighnment.Text;
                                     string characterclass = Combobox_class.Text;
                                     string template = null; ///comboBox_template/// not yet implemented
                                     string[] statarray2;
-                                    statarray2 = new string[6] { comboBox_dicerolls.Text, comboBox2.Text, comboBox3.Text, comboBox4.Text, comboBox5.Text, comboBox6.Text };
+                                    statarray2 = new string[6] { comboBox1.Text, comboBox2.Text, comboBox3.Text, comboBox4.Text, comboBox5.Text, comboBox6.Text };
                                     int[] valuearray;
                                     valuearray = new int[6] { Convert.ToInt16(txt_stat1.Text), Convert.ToInt16(txt_stat2.Text), Convert.ToInt16(txt_stat3.Text), Convert.ToInt16(txt_stat4.Text), Convert.ToInt16(txt_stat5.Text), Convert.ToInt16(txt_stat6.Text) };
                                     string race = comboBox_race.Text;
-                                    createcharacter.go(name, alighnment, characterclass, template,race, statarray2, valuearray);
+                                    createcharacter.go(name, alighnment, characterclass, template,race, statarray2, valuearray, skillList);
 
                                 }
 

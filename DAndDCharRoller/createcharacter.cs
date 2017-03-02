@@ -10,10 +10,10 @@ namespace DAndDCharRoller
     /// handles character creation
     /// todo: add template handling
     /// </summary>
-    class createcharacter
+    public class createcharacter
     {
 
-        public static void go(string name, string alighnment, string characterclass, string template, string race, string[] statarray2, int[] valuearray)
+        public static void go(string name, string alighnment, string characterclass, string template, string race, string[] statarray2, int[] valuearray, skillsdefinition[] skills)
         {
             ///sets stats and then passes on to check race
             int strength=-1;
@@ -22,49 +22,49 @@ namespace DAndDCharRoller
             int intelligence=-1;
             int wisdom=-1;
             int charisma=-1;
-            for (int i = 0; i < 7; i++)
+            for (int i = 0; i < 6; i++)
             {
-                if (statarray2[i] == "charisma")
+                if (statarray2[i] == "Charisma")
                 {
                     charisma = valuearray[i];
                 }
-                if (statarray2[i] == "strength")
+                if (statarray2[i] == "Strength")
                 {
                     strength = valuearray[i];
                 }
-                if (statarray2[i] == "dexterity")
+                if (statarray2[i] == "Dexterity")
                 {
                     dexterity = valuearray[i];
                 }
-                if (statarray2[i] == "constitution")
+                if (statarray2[i] == "Constitution")
                 {
                     constitution = valuearray[i];
                 }
-                if (statarray2[i] == "intelligence")
+                if (statarray2[i] == "Intelligence")
                 {
                     intelligence = valuearray[i];
                 }
-                if (statarray2[i] == "wisdom")
+                if (statarray2[i] == "Wisdom")
                 {
                     wisdom = valuearray[i];
                 }
 
             }
-            racemethod(name, alighnment, characterclass, template, race, strength, dexterity, constitution, intelligence, wisdom, charisma);
+            racemethod(name, alighnment, characterclass, template, race, strength, dexterity, constitution, intelligence, wisdom, charisma,skills);
         }
-        public static void racemethod(string name, string alighnment, string characterclass, string template, string race, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
+        public static void racemethod(string name, string alighnment, string characterclass, string template, string race, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, skillsdefinition[] skills)
         {
             ///handle racial adjustments
             ///pass to template for template adjustments
-            templatemethod(name, alighnment, characterclass, template, race, strength, dexterity, constitution, intelligence, wisdom, charisma);
+            templatemethod(name, alighnment, characterclass, template, race, strength, dexterity, constitution, intelligence, wisdom, charisma,skills);
         }
-        public static void templatemethod(string name, string alighnment, string characterclass, string template, string race, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
+        public static void templatemethod(string name, string alighnment, string characterclass, string template, string race, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, skillsdefinition[] skills)
         {
             ///handle template adjustments not yet done
             ///pass to charclass for final adjustments
-           classmethod(name, alighnment, characterclass, template, race, strength, dexterity, constitution, intelligence, wisdom, charisma);
+           classmethod(name, alighnment, characterclass, template, race, strength, dexterity, constitution, intelligence, wisdom, charisma,skills);
         }
-        public static void classmethod(string name, string alighnment, string characterclass, string template, string race, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma)
+        public static void classmethod(string name, string alighnment, string characterclass, string template, string race, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, skillsdefinition[] skills)
         {
             ///handle class adjustments calculate hp and skill points on per class basis 
             ///pass to form 3 for skill asighnment
@@ -74,6 +74,37 @@ namespace DAndDCharRoller
             int intelligencebonus = (intelligence - 10) / 2;
             int wisdombonus = (wisdom - 10) / 2;
             int charismabonus = (charisma - 10) / 2;
+            calculateskills(name, alighnment, characterclass, template, race, strength, dexterity, constitution, intelligence, wisdom, charisma, skills, strengthbonus,
+              dexteritybonus,
+              constitutionbonus,
+               intelligencebonus,
+              wisdombonus,
+              charismabonus);
+        }
+        public static void calculateskills(string name, string alighnment, string characterclass, string template, string race, int strength, int dexterity, int constitution, int intelligence, int wisdom, int charisma, skillsdefinition[] skills,int strengthbonus,
+            int dexteritybonus,
+            int constitutionbonus,
+            int intelligencebonus,
+            int wisdombonus,
+            int charismabonus )
+        {
+            int skillpoints;
+            if (characterclass == "Paladin") {  skillpoints = ((2 + intelligencebonus) * 4); }
+            else {
+                /// handle skill points for other classes 
+                 skillpoints = 100;
+                if (skillpoints < 4) { skillpoints = (4); }
+            }
+            skills frm = new skills(name, alighnment, characterclass, template, race, strength, dexterity, constitution, intelligence, wisdom, charisma, skills, strengthbonus,
+              dexteritybonus,
+              constitutionbonus,
+               intelligencebonus,
+              wisdombonus,
+              charismabonus,
+              skillpoints);
+            frm.ShowDialog();
+            
+
 
         }
     }
