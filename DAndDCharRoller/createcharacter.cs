@@ -92,9 +92,12 @@ namespace DAndDCharRoller
             if (characterclass == "Paladin") {  skillpoints = ((2 + intelligencebonus) * 4); }
             else {
                 /// handle skill points for other classes 
+                /// handle the bonus points a human gets
+                ///     human gets 1 bonus skill point in the innner perentheses part human min skills at first level 8
                  skillpoints = 100;
                 if (skillpoints < 4) { skillpoints = (4); }
             }
+            
             skills frm = new skills(name, alighnment, characterclass, template, race, strength, dexterity, constitution, intelligence, wisdom, charisma, skills, strengthbonus,
               dexteritybonus,
               constitutionbonus,

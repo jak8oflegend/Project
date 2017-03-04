@@ -5,7 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DAndDCharRoller
-{
+{/// <summary>
+/// defines skill for storage in skill array
+/// </summary>
     public class skillsdefinition
     {
         public skillsdefinition() { }

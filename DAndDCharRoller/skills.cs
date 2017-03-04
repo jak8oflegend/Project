@@ -10,6 +10,9 @@ using System.Windows.Forms;
 
 namespace DAndDCharRoller
 {
+    /// <summary>
+    /// creates skills form than stores complete character in the db
+    /// </summary>
     public partial class skills : Form
     {
         string nameform;

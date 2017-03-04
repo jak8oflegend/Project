@@ -8,7 +8,6 @@ using DAndDCharRoller;
 namespace DAndDCharRoller
 {/// <summary>
 /// handles dice rolls currently only 4dg drop 1 is porgrammed
-/// todo: programm other dice rolls
 /// </summary>
     public class statrolldice
     {
