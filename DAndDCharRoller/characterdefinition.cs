@@ -16,8 +16,9 @@ namespace DAndDCharRoller
     {
         public character() { }
         public character(string name,
-            string race,
+            string alighnment,
             string jobclass,
+            string race,
             int Strength,
 int Dexterity,
 int Constitution,
@@ -29,7 +30,8 @@ int Dexteritybonus,
 int Constitutionbonus,
 int Intelligencebonus,
 int Wisdombonus,
-int Charismabonus
+int Charismabonus,
+skillsdefinition[] skills
 )
         {
             this.name = name;
@@ -47,9 +49,11 @@ int Charismabonus
             this.Intelligencebonus = Intelligencebonus;
             this.Wisdombonus = Wisdombonus;
             this.Charismabonus = Charismabonus;
-
+            this.skills = skills;
+            this.alighnment = alighnment;
         }
         public string name { get; set; }
+        public string alighnment { get; set; }
         public string race { get; set; }
         public string jobclass { get; set; }
         public int Strength { get; set; }
@@ -64,5 +68,6 @@ int Charismabonus
         public int Intelligencebonus { get; set; }
         public int Wisdombonus { get; set; }
         public int Charismabonus { get; set; }
+        public skillsdefinition[] skills { get; set; }
     }
 }

@@ -17,7 +17,7 @@ namespace DAndDCharRoller
             SqlConnection con =
                 new SqlConnection();
             con.ConnectionString =
-                "Data Source=DESKTOP-AS62QIP\\SQLEXPRESS;Initial Catalog=BookRegistration;Integrated Security=True";
+                "Data Source=DESKTOP-AS62QIP\\SQLEXPRESS;Initial Catalog=CharDB;Integrated Security=True";
             return con;
         }
     }

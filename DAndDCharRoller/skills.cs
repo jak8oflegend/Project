@@ -120,6 +120,10 @@ namespace DAndDCharRoller
                 btn_storetodb.Enabled = false;
                 btn_storetodb.Text = "You have to many skill points";
             }
+            else if (sum < skillpointsform) {
+                btn_storetodb.Enabled = false;
+                btn_storetodb.Text = "You have to not spent all your skill points";
+            }
             else {
                 btn_storetodb.Enabled = true;
                 btn_storetodb.Text = "store character to database";
@@ -378,7 +382,35 @@ namespace DAndDCharRoller
 
         private void btn_storetodb_Click(object sender, EventArgs e)
         {
-
+            ComboBox[] usedsp;
+            usedsp = new ComboBox[55] { comboBox1,comboBox2,comboBox3,comboBox4,comboBox5,comboBox6,comboBox7,comboBox8,comboBox9,comboBox10,
+                comboBox11,comboBox12,comboBox13,comboBox14,comboBox15,comboBox16,comboBox17,comboBox18,comboBox19,comboBox20,comboBox21,comboBox22,
+                comboBox23,comboBox24,comboBox25,comboBox26,comboBox27,comboBox28,comboBox29,comboBox30,comboBox31,comboBox32,comboBox33,comboBox34,
+                comboBox35,comboBox36,comboBox37,comboBox38,comboBox39,comboBox40,comboBox46,comboBox47,comboBox48,comboBox49,comboBox50,comboBox51,
+                comboBox52,comboBox53,comboBox54,comboBox55,comboBox56,comboBox57,comboBox58,comboBox59,comboBox60, };
+            for (int i = 0; i < 55; i++) {
+                if (usedsp[i].Text != "") { skillzform[i].value += Convert.ToInt16(usedsp[i].Text); }
+            }
+            character toBeCreated = new character(
+                nameform, 
+                alighnmentform, 
+                characterclassform, 
+                //templateform, not implemented
+                raceform, 
+                strengthform, 
+                dexterityform, 
+                constitutionform, 
+                intelligenceform, 
+                wisdomform, 
+                charismaform,  
+                strengthbonusform,
+              dexteritybonusform,
+              constitutionbonusform,
+               intelligencebonusform,
+              wisdombonusform,
+              charismabonusform,
+              skillzform);
+            characterdb.Addcharacter(toBeCreated);
         }
     }
 }

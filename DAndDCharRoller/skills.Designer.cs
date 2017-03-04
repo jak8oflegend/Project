@@ -2041,11 +2041,12 @@
             // 
             // btn_storetodb
             // 
-            this.btn_storetodb.Location = new System.Drawing.Point(724, 457);
+            this.btn_storetodb.Enabled = false;
+            this.btn_storetodb.Location = new System.Drawing.Point(737, 457);
             this.btn_storetodb.Name = "btn_storetodb";
             this.btn_storetodb.Size = new System.Drawing.Size(308, 135);
             this.btn_storetodb.TabIndex = 222;
-            this.btn_storetodb.Text = "Store character to database";
+            this.btn_storetodb.Text = "Spend all your skill points";
             this.btn_storetodb.UseVisualStyleBackColor = true;
             this.btn_storetodb.Click += new System.EventHandler(this.btn_storetodb_Click);
             // 
