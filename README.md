@@ -18,7 +18,7 @@ You can only choose a stat once.
 The "Race" combobox changes your race:
   Each race should affect your stats.
 The "Template" combo box is currently empty.
-The "Next" button does not work as of yet, it is supposed to post all the information to the database.
+The "Next" button takes you to the skills form.
 
 skills:
 This form features a variety of skills that can be given to your character.
